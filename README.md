@@ -1,2 +1,2 @@
 # recipe
-QT aplication
+QT application
