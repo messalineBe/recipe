@@ -1,4 +1,5 @@
 TEMPLATE = app
 TARGET = recipe
 QT = core gui widgets
-SOURCES += accueil.cpp editRecipe.cpp
+SOURCES += main.cpp accueil.cpp editRecipe.cpp
+HEADERS += accueil.hpp
