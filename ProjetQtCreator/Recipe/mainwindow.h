@@ -14,10 +14,31 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    QWidget * widget;
 private slots:
     void on_buttonEntreeFolder_clicked();
 
 private:
     Ui::MainWindow *ui;
+};
+
+struct Etape{
+    int numero;
+    QString description;
+    //minuteur
+};
+
+struct Ingredient{
+    int quantite;
+    QString nomIngredient;
+};
+
+struct Recette{
+    QString nomRecette;
+    QList<QString> tag;
+    QList<Etape> etape;
+    QList<Ingredient> ingredients;
+    int nbPersonne;
+    //image
 };
 #endif // MAINWINDOW_H
