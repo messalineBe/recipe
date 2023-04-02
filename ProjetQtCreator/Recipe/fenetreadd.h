@@ -2,6 +2,7 @@
 #define FENETREADD_H
 
 #include <QMainWindow>
+//#include "mainwindow.h"
 
 namespace Ui {
 class FenetreAdd;
@@ -14,7 +15,9 @@ class FenetreAdd : public QMainWindow
 public:
     explicit FenetreAdd(QWidget *parent = nullptr);
     ~FenetreAdd();
-    int count=0;
+    int countStep=0;
+//    Etape et;
+
 
 private slots:
     void on_addIngredient_clicked();

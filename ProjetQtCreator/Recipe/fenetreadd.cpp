@@ -1,5 +1,6 @@
 #include "fenetreadd.h"
 #include "ui_fenetreadd.h"
+#include "mainwindow.h"
 
 FenetreAdd::FenetreAdd(QWidget *parent) :
     QMainWindow(parent),
@@ -21,9 +22,6 @@ void FenetreAdd::on_addIngredient_clicked()
     //quantité ingrédient
     QSpinBox *quantity = new QSpinBox();
 
-    //btn
-//    QPushButton *validerIngredient = new QPushButton ( "Valider" );
-
     //créer layout horizontal
     QHBoxLayout *horizontalLayout = new QHBoxLayout();
 
@@ -32,14 +30,15 @@ void FenetreAdd::on_addIngredient_clicked()
     horizontalLayout->addWidget(addIngredient);
 
     ui->verticalLayout_2->addLayout(horizontalLayout);
+    qInfo()<<addIngredient->text();
 }
 
 
 void FenetreAdd::on_addStep_clicked()
 {
-    count ++;
+    countStep ++;
     //numéro
-    QLabel *num = new QLabel(QString::number(count));
+    QLabel *num = new QLabel(QString::number(countStep));
 
     //text à editer
     QLineEdit *description = new QLineEdit();
@@ -53,6 +52,10 @@ void FenetreAdd::on_addStep_clicked()
 
     ui->verticalLayout_3->addLayout(horizontalLayout2);
 
+//    Etape *et = new Etape();
+//    et.numero = countStep;
+//    et.description = description->text();
+
 }
 
 
@@ -60,29 +63,12 @@ void FenetreAdd::on_addStep_clicked()
 
 void FenetreAdd::on_pushButton_clicked()
 {
-//    //Ingredients
-//        Ingredient lardon1;
-//        lardon1.nomIngredient =" g de ladons";
-//        lardon1.quantite = 800;
+    qInfo()<<countStep;
+//    r1.nomRecette = "trezertyuio";
+    close();
+//    for(int i=0; i<countStep; i++){
 
-//        //Recette 1: Gratin (Plat)
-//            Recette r1;
-//            r1.nomRecette = "Gratin";
-//            r1.tag = {"#plat"};
-//            r1.nbPersonne = 8;
-//            r1.ingredients = {pommeDeTerres, lardon1, creme};
-//            Etape e1r1;
-//            e1r1.numero = 1;
-//            e1r1.description = "éplucher les pommes de terres";
-//            Etape e2r1;
-//            e2r1.numero = 2;
-//            e2r1.description = "Couper les pommes de terres";
-//            Etape e3r1;
-//            e3r1.numero = 3;
-//            e3r1.description = "Faire boullir de l'eau et faire cuire les pommes de terres pendant 10min";
-//            Etape e4r1;
-//            e4r1.numero = 4;
-//            e4r1.description = "Dans un plat à gratin disposer les pommes de terres, ajouter les lardons la crème et le fromage";
-//            r1.etape = {e1r1, e2r1, e3r1, e4r1};
+//    }
+
 }
 

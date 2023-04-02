@@ -178,7 +178,7 @@ MainWindow::MainWindow(QWidget *parent)
     //Tableau
         //Dimension tableau
         ui->tableWidget->setColumnCount(4);
-        ui->tableWidget->setRowCount(10);
+        ui->tableWidget->setRowCount(5);
         //Bordure tableau
         ui->tableWidget->horizontalHeader()->setVisible(false);
         ui->tableWidget->verticalHeader()->setVisible(false);
@@ -205,7 +205,9 @@ MainWindow::MainWindow(QWidget *parent)
             ui->tableWidget->setCellWidget(i, 1, new QLabel(tag));
 //            ui->tableWidget->setCellWidget(i, 2, new QLabel("nombre de persones: "+QString::number(recette.nbPersonne)));
 //            ui->tableWidget->setCellWidget(i, 3, buttonVoirRecette );
-            ui->tableWidget->setCellWidget(i, 3, new QPushButton ( "Voir la recette" ) );
+            QPushButton *buttonVoirRecette = new QPushButton ( "Voir la recette" );
+            ui->tableWidget->setCellWidget(i, 3, buttonVoirRecette );
+//            ui->tableWidget->setCellWidget(i, 3, new QPushButton ( "Voir la recette" ) );
             i++;
         }
 
@@ -251,29 +253,20 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_buttonEntreeFolder_clicked()
 {
-   QMainWindow *entreeWindow = new QMainWindow();
-   entreeWindow -> show();
-   qInfo()<<"salut";
+//   QMainWindow *entreeWindow = new QMainWindow();
+//   entreeWindow -> show();
+   qInfo()<<"Pour filtrer les recettes par entrée";
 }
 
 void MainWindow::on_buttonAddRecipe_clicked()
 {
-   //Créer une fenetre test1
-//   QMainWindow *addWindow = new QMainWindow();
-//   addWindow->setFixedSize(500, 500);
-//   addWindow -> show();
-//   qInfo()<<"test";
-
-
-//   QLineEdit *addRecette = new QLineEdit();
-//   addRecette->setPlaceholderText("Ex: Gratin chocolat");
-//   QLabel *nomRecette = new QLabel ("Nom de la recette") ;
-
-//   addWindow->setAttribute(addRecette);
-
    fenetreAdd = new FenetreAdd();
    fenetreAdd->show();
-
-
 }
+
+//void MainWindow::on_buttonVoirRecette_clicked()
+//{
+//   fenetreAdd = new FenetreAdd();
+//   fenetreAdd->show();
+//}
 

@@ -4,6 +4,7 @@
 //#include <QMainWindow>
 #include "fenetreadd.h"
 #include <QLayoutItem>
+#include <QPushButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,11 +17,12 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-//    QWidget * widget;
     FenetreAdd * fenetreAdd;
+    QPushButton *buttonVoirRecette;
 private slots:
     void on_buttonEntreeFolder_clicked();
     void on_buttonAddRecipe_clicked();
+//    void on_buttonVoirRecette_clicked();
 
 private:
     Ui::MainWindow *ui;
