@@ -3,6 +3,7 @@
 
 //#include <QMainWindow>
 #include "fenetreadd.h"
+#include <QLayoutItem>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
