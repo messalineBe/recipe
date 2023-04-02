@@ -64,7 +64,7 @@ MainWindow::MainWindow(QWidget *parent)
         cannelle.nomIngredient =" pincée de cannelle";
         cannelle.quantite = 1;
 
-        oignon
+//        Ingredient oignon;
 
     //Recette 1: Gratin (Plat)
         Recette r1;
@@ -157,7 +157,7 @@ MainWindow::MainWindow(QWidget *parent)
         r5.nomRecette = "Oeuf à la coque";
         r5.tag = {"#entree"};
         r5.nbPersonne = 4;
-        r5.ingredients = {oign, butternut};
+        r5.ingredients = {oignon, butternut};
         Etape e1r5;
         e1r5.numero = 1;
         e1r5.description = "Mettre de l'eau à chauffer Lorsque l'eau bout, plonger les oeufs dedans avec une cuillère et compter 3 minutes de cuisson avant de les sortir de l'eau";
@@ -254,5 +254,26 @@ void MainWindow::on_buttonEntreeFolder_clicked()
    QMainWindow *entreeWindow = new QMainWindow();
    entreeWindow -> show();
    qInfo()<<"salut";
+}
+
+void MainWindow::on_buttonAddRecipe_clicked()
+{
+   //Créer une fenetre test1
+//   QMainWindow *addWindow = new QMainWindow();
+//   addWindow->setFixedSize(500, 500);
+//   addWindow -> show();
+//   qInfo()<<"test";
+
+
+//   QLineEdit *addRecette = new QLineEdit();
+//   addRecette->setPlaceholderText("Ex: Gratin chocolat");
+//   QLabel *nomRecette = new QLabel ("Nom de la recette") ;
+
+//   addWindow->setAttribute(addRecette);
+
+   fenetreAdd = new FenetreAdd();
+   fenetreAdd->show();
+
+
 }
 

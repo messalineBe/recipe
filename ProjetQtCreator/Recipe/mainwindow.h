@@ -1,7 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
+//#include <QMainWindow>
+#include "fenetreadd.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,9 +15,11 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    QWidget * widget;
+//    QWidget * widget;
+    FenetreAdd * fenetreAdd;
 private slots:
     void on_buttonEntreeFolder_clicked();
+    void on_buttonAddRecipe_clicked();
 
 private:
     Ui::MainWindow *ui;
