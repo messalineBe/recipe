@@ -30,7 +30,6 @@ void FenetreAdd::on_addIngredient_clicked()
     horizontalLayout->addWidget(addIngredient);
 
     ui->verticalLayout_2->addLayout(horizontalLayout);
-    qInfo()<<addIngredient->text();
 }
 
 
@@ -63,8 +62,7 @@ void FenetreAdd::on_addStep_clicked()
 
 void FenetreAdd::on_pushButton_clicked()
 {
-    qInfo()<<countStep;
-//    r1.nomRecette = "trezertyuio";
+//  il faudrait ajouter les valeurs au tableau
     close();
 //    for(int i=0; i<countStep; i++){
 

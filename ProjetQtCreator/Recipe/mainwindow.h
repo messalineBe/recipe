@@ -23,6 +23,9 @@ private slots:
     void on_buttonEntreeFolder_clicked();
     void on_buttonAddRecipe_clicked();
 //    void on_buttonVoirRecette_clicked();
+    void on_buttonDessertsFolder_clicked();
+
+    void on_buttonPlatsFolder_clicked();
 
 private:
     Ui::MainWindow *ui;

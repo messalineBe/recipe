@@ -203,7 +203,7 @@ MainWindow::MainWindow(QWidget *parent)
             }
             ui->tableWidget->setCellWidget(i, 0, new QLabel(recette.nomRecette));
             ui->tableWidget->setCellWidget(i, 1, new QLabel(tag));
-//            ui->tableWidget->setCellWidget(i, 2, new QLabel("nombre de persones: "+QString::number(recette.nbPersonne)));
+            ui->tableWidget->setCellWidget(i, 2, new QLabel("Pour "+QString::number(recette.nbPersonne)+" persones"));
 //            ui->tableWidget->setCellWidget(i, 3, buttonVoirRecette );
             QPushButton *buttonVoirRecette = new QPushButton ( "Voir la recette" );
             ui->tableWidget->setCellWidget(i, 3, buttonVoirRecette );
@@ -266,7 +266,18 @@ void MainWindow::on_buttonAddRecipe_clicked()
 
 //void MainWindow::on_buttonVoirRecette_clicked()
 //{
-//   fenetreAdd = new FenetreAdd();
-//   fenetreAdd->show();
+
 //}
+
+
+void MainWindow::on_buttonDessertsFolder_clicked()
+{
+    qInfo()<<"Pour filtrer les recettes par Desserts";
+}
+
+
+void MainWindow::on_buttonPlatsFolder_clicked()
+{
+    qInfo()<<"Pour filtrer les recettes par Plat";
+}
 
